@@ -1,0 +1,246 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.example.zdm.yourdaily.widget.ResizeRelativeLayout
+    android:id="@+id/layout_diary_edit_root"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:id="@+id/layout_diary_edit_top"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/bg_diary_edit"
+        android:minHeight="45dp"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp">
+
+        <TextView
+            android:id="@+id/tv_diary_edit_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:text="标题"
+            android:textColor="#333333"
+            android:textSize="16sp"/>
+
+        <EditText
+            android:id="@+id/et_diary_edit_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp"
+            android:layout_toRightOf="@id/tv_diary_edit_title"
+            android:textColor="#333333"
+            android:textSize="16sp"/>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/layout_diary_edit_subhead"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/layout_diary_edit_top"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/bg_diary_edit"
+        android:minHeight="45dp"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp">
+
+        <TextView
+            android:id="@+id/tv_diary_edit_subhead"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:text="副标题"
+            android:textColor="#333333"
+            android:textSize="16sp"/>
+
+        <TextView
+            android:id="@+id/tv_diary_edit_tag"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:text="添加标签"
+            android:textColor="#333333"
+            android:textSize="16sp"/>
+
+        <ImageView
+            android:id="@+id/iv_diary_edit_tag"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_centerVertical="true"
+            android:layout_toLeftOf="@id/tv_diary_edit_tag"
+            android:background="@drawable/ic_tag"/>
+
+        <EditText
+            android:id="@+id/et_diary_edit_subhead"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_toLeftOf="@id/iv_diary_edit_tag"
+            android:layout_toRightOf="@id/tv_diary_edit_subhead"
+            android:textColor="#333333"
+            android:textSize="14sp"/>
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/layout_diary_edit_option"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/layout_diary_edit_subhead"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/bg_diary_edit"
+        android:minHeight="45dp"
+        android:orientation="horizontal"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp">
+
+        <TextView
+            android:id="@+id/tv_diary_edit_date"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_weight="2"
+            android:text="2019-12-12"
+            android:textColor="#666666"
+            android:textSize="14sp"/>
+
+        <TextView
+            android:id="@+id/tv_diary_edit_location"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_weight="2"
+            android:text="GuangZhou"
+            android:textColor="#666666"
+            android:textSize="14sp"/>
+
+        <Spinner
+            android:id="@+id/spinner_diary_edit_mood"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_weight="1"
+            android:background="@null"
+            android:textColor="#666666"
+            android:textSize="14sp"/>
+
+        <Spinner
+            android:id="@+id/spinner_diary_edit_weather"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_weight="1"
+            android:background="@null"
+            android:textColor="#666666"
+            android:textSize="14sp"/>
+
+    </LinearLayout>
+
+    <me.gujun.android.taggroup.TagGroup
+        android:id="@+id/tg_diary_edit_tag"
+        style="@style/TagGroup"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/layout_diary_edit_option"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="10dp"/>
+
+    <LinearLayout
+        android:id="@+id/layout_diary_edit_bottom"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginTop="10dp"
+        android:background="@color/colorPrimary"
+        android:minHeight="40dp"
+        android:orientation="horizontal">
+
+        <RelativeLayout
+            android:id="@+id/layout_diary_edit_location"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/selector_btn_login">
+
+            <ImageView
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_centerInParent="true"
+                android:background="@drawable/ic_location"/>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/layout_diary_edit_picture"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/selector_btn_login">
+
+            <ImageView
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_centerInParent="true"
+                android:background="@drawable/ic_picture"/>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/layout_diary_edit_clean"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/selector_btn_login">
+
+            <ImageView
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_centerInParent="true"
+                android:background="@drawable/ic_close"/>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/layout_diary_edit_save"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/selector_btn_login">
+
+            <ImageView
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_centerInParent="true"
+                android:background="@drawable/ic_save"/>
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+    <com.example.zdm.yourdaily.widget.RichEditTextView
+        android:id="@+id/et_diary_edit_content"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/layout_diary_edit_bottom"
+        android:layout_below="@id/tg_diary_edit_tag"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/bg_diary_edit"
+        android:gravity="start"
+        android:padding="10dp" />
+
+</com.example.zdm.yourdaily.widget.ResizeRelativeLayout>

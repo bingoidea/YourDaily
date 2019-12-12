@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">YourDaily</string>
+    <string name="splash_string">Your Daily</string>
+    <string name="login_account_hint">输入账号</string>
+    <string name="login_password_hint">输入密码</string>
+    <string name="password_affirm_hint">确认密码</string>
+    <string name="tv_login_add_text">新增一个账户 o(￣▽￣)o</string>
+    <string name="tv_login_text">登录</string>
+    <string name="main_name">三叶</string>
+    <string name="tv_dialog_title_text">输入条目名称</string>
+    <string name="tv_dialog_sure_text">确定</string>
+    <string name="tv_setting_switch_pin_text">开启密码</string>
+    <string name="tv_memo_save_text">保存</string>
+    <string name="et_memo_new_hint">新建备忘</string>
+</resources>
